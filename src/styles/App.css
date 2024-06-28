@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
 }
 
 .containerNav {
@@ -17,6 +17,8 @@ header {
   margin: auto;
   display: flex;
   align-items: flex-end;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(116, 116, 116);
 }
 
 .searchContainer {
@@ -26,15 +28,19 @@ header {
   max-width: 18em;
 }
 
-.containerNav a {
+.containerNav a,
+.containerNav p {
   color: rgb(116, 116, 116);
   text-decoration: none;
   margin-left: 20px;
   float: left;
+  cursor: pointer;
 }
 
 .containerNav a:hover,
-.containerNav a:active {
+.containerNav a:active,
+.containerNav p:hover,
+.containerNav p:active {
   color: white;
 }
 
@@ -88,7 +94,7 @@ input {
 li {
   list-style: none;
   padding: .3em;
-
+  cursor: pointer;
 }
 
 li:nth-child(odd) {
@@ -107,37 +113,35 @@ li:hover {
   color: white;
   font-size: 80px;
   margin-left: 2em;
-  margin-top: 1em;
 }
 
 .blockDescription {
   width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  height: 40vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .posterContainer {
   width: 40%;
-  min-height: 35.62em;
+  height: 100%;
   background-position-y: center;
   background-position-x: 70%;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-bottom: 3.12em;
-  margin-top: 3.12em;
   transition: all .4s ease;
 }
 
 .descriptionContainer {
-  font-size: 18px;
+  font-size: 1rem;
   color: white;
-  height: fit-content;
-  width: 30%;
+  height: 100%;
+  width: 50%;
   margin-left:4em;
-  margin-right: 2em;
   padding: 1.3em;
   background: linear-gradient(to right, rgb(25, 25, 25), rgba(0, 0, 0, 0.008));
   border-radius: 10px;
@@ -145,7 +149,7 @@ li:hover {
 }
 
 .descriptionContainer:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background: linear-gradient(to left, rgb(25, 25, 25), rgba(0, 0, 0, 0.008));
 }
 
@@ -171,12 +175,10 @@ li:hover {
 
 .carouselNotflix {
   margin-bottom: 70px;
+  height: auto;
 }
 
 .titleContainer {
-  display: flex;
-  justify-content: left;
-  align-items: center;
   color: rgb(204, 204, 204);
   font-size: 30px;
   margin-left: 2em;

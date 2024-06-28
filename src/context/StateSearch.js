@@ -7,11 +7,6 @@ const StateSearch = ({ children }) => {
     const [title, setTitle] = useState("")
     const [type, setType] = useState("movie")
     const [results, setResults] = useState("")
-    
-/* tt0095483  ID tests*/
-// my key 38c8d091
-// nicolas key 73ab5181
-
 
     /* id search */
     useEffect(() => {
@@ -22,9 +17,11 @@ const StateSearch = ({ children }) => {
 
     /* title search */
     useEffect(() => {
-        fetch(`http://www.omdbapi.com/?apikey=73ab5181&s="${title}"&type="${type}"&page=1`)
+        console.log(title, type)
+        fetch(`http://www.omdbapi.com/?apikey=73ab5181&s="${title === '' ? data.title : title}"&type="${type === '' ? data.type : type}"&page=1`)
             .then(Response => Response.json())
             .then(data => setResults(data));
+
     }, [title])
 
     return (

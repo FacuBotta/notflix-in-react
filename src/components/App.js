@@ -8,7 +8,6 @@ import NavNotflix from './nav';
 function App() {
   return (
     <StateSearch>
-      <div>
         <header>
           <NavNotflix />
         </header>
@@ -16,7 +15,6 @@ function App() {
           <BlockDescription />
           <Carousel />
         </main>
-      </div>
     </StateSearch>
   );
 }
